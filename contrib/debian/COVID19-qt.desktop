@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=COVID19
+Comment=COVID19 P2P Cryptocurrency
+Comment[fr]=COVID19, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=COVID19, eşten eşe kriptografik sanal para birimi
+Exec=COVID19-qt %u
+Terminal=false
+Type=Application
+Icon=COVID19128
+MimeType=x-scheme-handler/COVID19;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/COVID19d: config file for /etc/init.d/COVID19d
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/COVID19/COVID19.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/COVID19d"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/COVID19d.pid"
+
+# Where to write COVID19d data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/COVID19d"
+
+# User and group to own COVID19d process
+#BITCOIND_USER="COVID19"
+#BITCOIND_GROUP="COVID19"
+
+# Path to COVID19d executable
+#BITCOIND_BIN="/usr/bin/COVID19d"
+
+# Nice value to run COVID19d under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

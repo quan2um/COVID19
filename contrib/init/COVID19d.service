@@ -1,0 +1,26 @@
+[Unit]
+Description=COVID19's distributed currency daemon
+After=network.target
+
+[Service]
+User=COVID19
+Group=COVID19
+
+Type=COVID19
+PIDFile=/var/lib/COVID19d/COVID19d.pid
+
+ExecStart=/usr/bin/COVID19d -daemon -pid=/var/lib/COVID19d/COVID19d.pid \
+          -conf=/etc/COVID19/COVID19.conf -datadir=/var/lib/COVID19d
+
+ExecStop=-/usr/bin/COVID19-cli -conf=/etc/COVID19/COVID19.conf \
+         -datadir=/var/lib/COVID19d stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
